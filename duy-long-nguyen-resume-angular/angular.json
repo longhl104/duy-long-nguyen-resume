@@ -35,7 +35,7 @@
                             "node_modules/boxicons/css/boxicons.min.css"
                         ],
                         "scripts": [
-                            "src/assets/js/main.js"
+                            "src/assets/js/html2pdf.bundle.min.js"
                         ]
                     },
                     "configurations": {
