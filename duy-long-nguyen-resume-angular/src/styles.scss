@@ -224,6 +224,11 @@ a[href^="http"]:after, a[href^="mailto"]:after, a[href^="tel"]:after {
     padding-left: 1.2rem;
 }
 
+.scale-cv a[href^="http"]:after, .scale-cv a[href^="mailto"]:after, .scale-cv a[href^="tel"]:after
+{
+    display: none;
+}
+
 img {
 	max-width: 100%;
 	height: auto;

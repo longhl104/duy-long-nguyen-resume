@@ -42,7 +42,7 @@ export class ResumeService
         html2pdf(areaCv, this._opt);
     }
 
-    private _removeScale(_removeScale: any, arg1: number)
+    private _removeScale(_removeScale: any)
     {
         document.body.classList.remove('scale-cv')
     }
