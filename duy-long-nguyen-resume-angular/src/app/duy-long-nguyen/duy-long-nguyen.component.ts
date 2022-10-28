@@ -9,6 +9,33 @@ import { ScriptService } from "../script.service";
 })
 export class DuyLongNguyenComponent implements OnInit, AfterViewInit
 {
+    leftSkills = [
+        "HTML, CSS, Javascript, Typescript",
+        "Angular & AngularJS",
+        "ReactJS",
+    ];
+
+    rightSkills = [
+        "Node.js, Express.js",
+        "C#, .Net Frameworks",
+        "Microsoft SQL Server",
+        "MongoDB",
+    ];
+
+    leftMiscellaneousSkills = [
+        "Data Structures",
+        "Algorithm Design",
+        "Test Automation, CI/CD",
+        "Micro Frontend, Micro Services"
+    ];
+
+    rightMiscellaneousSkills = [
+        "Agile Development",
+        "Git",
+        "JWT, End-to-end encryption",
+        "AWS, Google Cloud Platform, Firebase",
+    ];
+
     constructor(
         private $script: ScriptService,
     )

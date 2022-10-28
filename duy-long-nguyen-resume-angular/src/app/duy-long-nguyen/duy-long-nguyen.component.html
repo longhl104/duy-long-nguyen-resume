@@ -36,14 +36,14 @@
                         Awards
                     </a>
                 </li>
-                <li class="nav__item">
+                <!-- <li class="nav__item">
                     <a href="#references" class="nav__link">
                         <i class="bx bx-link-external nav__icon"></i>References
                     </a>
-                </li>
+                </li> -->
                 <li class="nav__item">
                     <a href="#projects" class="nav__link">
-                        <i class="bx bx-link-external nav__icon"></i>Personal
+                        <i class="bx bx-book-content nav__icon"></i>Personal
                         Projects
                     </a>
                 </li>
@@ -174,9 +174,9 @@
                     applications and working across to full-stack. I am a quick
                     learner, self-motivated, well organized and pay attention to
                     details. I have strong analytic skills and problem-solving
-                    skills. I am seeking job opportunities to apply full
-                    stack-development skills for business improvement and
-                    personal development.
+                    skills. I am seeking job opportunities to apply full-stack
+                    development skills for business improvement and personal
+                    development.
                 </p>
             </section>
 
@@ -214,30 +214,22 @@
 
                 <div class="skills__content bd-grid">
                     <ul class="skills__data">
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> Angular
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> AngularJS
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> React
+                        <li
+                            class="skills__name"
+                            *ngFor="let skill of leftSkills"
+                        >
+                            <span class="skills__circle"></span>
+                            <span [innerText]="skill"></span>
                         </li>
                     </ul>
 
                     <ul class="skills__data">
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> .Net Core
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> MySQL
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> Microsoft SQL
-                            Server
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> MongoDB
+                        <li
+                            class="skills__name"
+                            *ngFor="let skill of rightSkills"
+                        >
+                            <span class="skills__circle"></span>
+                            <span [innerText]="skill"></span>
                         </li>
                     </ul>
                 </div>
@@ -249,22 +241,22 @@
 
                 <div class="skills__content bd-grid">
                     <ul class="skills__data">
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> Competitive
-                            Programming
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> C/C++
+                        <li
+                            class="skills__name"
+                            *ngFor="let skill of leftMiscellaneousSkills"
+                        >
+                            <span class="skills__circle"></span>
+                            <span [innerText]="skill"></span>
                         </li>
                     </ul>
 
                     <ul class="skills__data">
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> Agile
-                            Development
-                        </li>
-                        <li class="skills__name">
-                            <span class="skills__circle"></span> Git
+                        <li
+                            class="skills__name"
+                            *ngFor="let skill of rightMiscellaneousSkills"
+                        >
+                            <span class="skills__circle"></span>
+                            <span [innerText]="skill"></span>
                         </li>
                     </ul>
                 </div>
@@ -283,26 +275,67 @@
 
                         <div class="experience__data bd-grid">
                             <h3 class="experience__title">
-                                Software Developer
+                                Junior Software Developer
                             </h3>
                             <span class="experience__company"
-                                >From 08/2021 to Present | Sinnott Bros
-                                Media</span
+                                >From 09/2022 to current | Midwinter Financial
+                                Services - a Bravura company (Project:
+                                AdviceOS)</span
                             >
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
-                                Developed strong skills for analyzing
+                                Picked up new technologies quickly and
+                                participated in software design, technical
+                                articulation and delivery of security and
+                                scalability aspects for the project with
+                                high-quality and reliable code.
+                            </p>
+                            <p class="experience__description">
+                                <i class="bx bx-radio-circle-marked"></i>
+                                Responded to bug reports and debug production
+                                issues across the entire platform.
+                            </p>
+                            <p class="experience__description">
+                                <i class="bx bx-radio-circle-marked"></i>
+                                Technologies used: C#, WebAPI, SQL Server,
+                                Entity Framework, Angular, Typescript,
+                                Breeze.js, HTML, CSS and Typescript/Javascript,
+                                Web Services using REST and SOAP, and SQL.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience__content">
+                        <div class="experience__time">
+                            <span class="experience__rounder"></span>
+                            <span class="experience__line"></span>
+                        </div>
+
+                        <div class="experience__data bd-grid">
+                            <h3 class="experience__title">
+                                Software Developer
+                            </h3>
+                            <span class="experience__company"
+                                >From 08/2021 to 09/2022 | Sinnott Bros Media
+                                (Projects: SBM APS, Bruce APS, PSC
+                                Tracker)</span
+                            >
+                            <p class="experience__description">
+                                <i class="bx bx-radio-circle-marked"></i>
+                                Worked across on large and long-running
+                                projects. Exposed to multiple tech stacks:
+                                Angular/AngularJS, .Net, SQL Server/MongoDB.
+                            </p>
+                            <p class="experience__description">
+                                <i class="bx bx-radio-circle-marked"></i>
+                                Developed strong skills for analysing
                                 requirements, designing solutions and modelling
                                 data.
                             </p>
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
-                                Developed robust and bug-free code with
+                                Developed robust and nearly bug-free code with
                                 appropriate sanity checking and error handling.
-                            </p>
-                            <p class="experience__description">
-                                <i class="bx bx-radio-circle-marked"></i>
-                                Worked on large and long-running projects.
                             </p>
                         </div>
                     </div>
@@ -318,7 +351,11 @@
                                 Intern Frontend Developer
                             </h3>
                             <span class="experience__company"
-                                >From 11/2020 to 02/2021 | SEED Soft by IC</span
+                                >From 11/2020 to 02/2021 | SEED Soft by IC
+                                (Project:
+                                <a href="https://thehat.life" target="_blank"
+                                    >HAT</a
+                                >)</span
                             >
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
@@ -340,10 +377,31 @@
             </section>
 
             <!--========== CERTIFICATES and Awards ==========-->
+            <br />
+            <br />
+            <br />
+            <br />
             <section class="certificate section" id="certificates">
                 <h2 class="section-title">Certificates and Awards</h2>
 
                 <div class="certificate__container bd-grid">
+                    <div class="certificate__content">
+                        <h3 class="certificate__title">
+                            <a
+                                href="https://www.hackerrank.com/certificates/28013521b7fc"
+                                target="_blank"
+                            >
+                                Problem Solving (Intermediate) Certificate
+                                (Issued Aug 2022) - Hacker Rank
+                            </a>
+                        </h3>
+                        <p class="certificate__description">
+                            It covers topics of Data Structures (such as
+                            HashMaps, Stacks and Queues) and Algorithms (such as
+                            Optimal Solutions).
+                        </p>
+                    </div>
+
                     <div class="certificate__content">
                         <h3 class="certificate__title">
                             <a
@@ -368,7 +426,7 @@
                         </h3>
                         <p class="certificate__description">
                             An annual multi-tiered competitive programming
-                            competition among the universities of state NSW
+                            competition among the universities of state NSW.
                         </p>
                     </div>
 
@@ -380,7 +438,7 @@
                         <p class="certificate__description">
                             An annual multi-tiered competitive programming
                             competition among the universities of South Pacific
-                            Region
+                            Region.
                         </p>
                     </div>
 
@@ -391,7 +449,7 @@
                         </h3>
                         <p class="certificate__description">
                             An annual competitive programming competition among
-                            top Vietnamese high school students
+                            top Vietnamese high school students.
                         </p>
                     </div>
 
@@ -402,14 +460,14 @@
                         </h3>
                         <p class="certificate__description">
                             An annual competitive programming competition among
-                            top Vietnamese high school students
+                            top Vietnamese high school students.
                         </p>
                     </div>
                 </div>
             </section>
 
             <!--========== REFERENCES ==========-->
-            <section class="references section" id="references">
+            <!-- <section class="references section" id="references">
                 <h2 class="section-title">References</h2>
 
                 <div class="references__container bd-grid">
@@ -417,7 +475,7 @@
                         <span class="references__subtitle"
                             >Senior Software Designer</span
                         >
-                        <h3 class="references__title">Mr. Bao Nguyen</h3>
+                        <h3 class="references__title">Mr. Bao Nguyen ()</h3>
                         <ul class="references__contact">
                             <li>
                                 Phone:
@@ -434,7 +492,7 @@
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!--========== LANGUAGES ==========-->
             <!-- <section class="languages section">
@@ -473,18 +531,20 @@
                             >
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
-                                Built reusable <b>TypeScript library</b> for
-                                utilities, front-end models, and components
-                                using Angular components.
+                                Built and published reusable
+                                <b>TypeScript library</b> for utilities, crypto,
+                                front-end models, and custom Angular components.
+                                Used rollup.js for module bundling.
                             </p>
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
-                                Wrote unit tests using <b>Jasmine</b>.
+                                Wrote unit tests using <b>Jest Framework</b>.
                             </p>
                             <p class="experience__description">
                                 <i class="bx bx-radio-circle-marked"></i>
-                                Used <b>Fetch API</b> and <b>Axios</b> for
-                                calling HTTP methods.
+                                Used GitLab CI/CD to catch bugs and errors early
+                                in the development cycle and to automatically
+                                build, test, deploy, and monitor the library.
                             </p>
                         </div>
                     </div>
@@ -520,15 +580,18 @@
                                 Used <b>Firebase</b> for hosting,
                                 authentication, storing NoSQL database, storage
                                 management and storing functions (serving
-                                backend codes)
+                                backend codes).
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <br />
+            <br />
+
             <!--========== INTERESTS ==========-->
-            <section class="interests section">
+            <!-- <section class="interests section">
                 <h2 class="section-title">Interests</h2>
 
                 <div class="interests__container bd-grid">
@@ -549,7 +612,7 @@
                         <span class="interests__name">Running</span>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
     </div>
 </main>
