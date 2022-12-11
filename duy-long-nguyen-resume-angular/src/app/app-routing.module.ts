@@ -12,6 +12,7 @@ const routes: Routes = [
         path: "",
         component: DuyLongNguyenComponent,
     },
+    { path: '2048-plus', loadChildren: () => import('./two-zero-four-eight-plus/two-zero-four-eight-plus.module').then(m => m.TwoZeroFourEightPlusModule) },
 ];
 
 @NgModule({

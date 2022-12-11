@@ -7,6 +7,7 @@ import { HaiYenNgoComponent } from './hai-yen-ngo/hai-yen-ngo.component';
 import { DuyLongNguyenComponent } from './duy-long-nguyen/duy-long-nguyen.component';
 import { ResumeButtonComponent } from './shared/resume-button/resume-button.component';
 import { AddressComponent } from "./shared/address/address.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddressComponent } from "./shared/address/address.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
