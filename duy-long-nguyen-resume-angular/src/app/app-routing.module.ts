@@ -9,6 +9,10 @@ const routes: Routes = [
         component: HaiYenNgoComponent,
     },
     {
+        path: "hai-yen-ngo/valentine",
+        loadChildren: () => import("./hai-yen-ngo/valentine/valentine.module").then(m => m.ValentineModule),
+    },
+    {
         path: "",
         component: DuyLongNguyenComponent,
     },
