@@ -37,12 +37,6 @@
                         "scripts": [
                             "src/assets/js/html2pdf.bundle.min.js",
                             "node_modules/jquery/dist/jquery.min.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex.min.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex-parser.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex-jit.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex-builderbase.min.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex-async.min.js",
-                            "src/app/hai-yen-ngo/valentine/renxi/jscex-async-powerpack.min.js",
                             "src/app/hai-yen-ngo/valentine/renxi/functions.js",
                             "src/app/hai-yen-ngo/valentine/renxi/love.js"
                         ]

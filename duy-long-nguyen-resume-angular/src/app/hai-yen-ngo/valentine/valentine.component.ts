@@ -5,6 +5,11 @@ declare var Jscex: any;
 declare var $await: any;
 declare var timeElapse: any;
 
+function delay(ms: number)
+{
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 @Component({
     selector: 'app-valentine',
     templateUrl: './valentine.component.html',
@@ -32,14 +37,14 @@ export class ValentineComponent implements OnInit
 
     private setUp(): void
     {
-        (function (): any
+        (async function (): Promise<void>
         {
             var canvas = $('#canvas');
 
             if (!canvas[0].getContext)
             {
                 $("#error").show();
-                return false;
+                return;
             }
 
             var width = canvas.width();
@@ -107,62 +112,62 @@ export class ValentineComponent implements OnInit
                 canvas.toggleClass('hand', seed.hover(x, y));
             });
 
-            var seedAnimate = eval(Jscex.compile("async", function ()
+            var seedAnimate = async function ()
             {
                 seed.draw();
                 while (hold)
                 {
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 }
                 while (seed.canScale())
                 {
                     seed.scale(0.95);
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 }
                 while (seed.canMove())
                 {
                     seed.move(0, 2);
                     foot.draw();
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 }
-            }));
+            };
 
-            var growAnimate = eval(Jscex.compile("async", function ()
+            var growAnimate = async function ()
             {
                 do
                 {
                     tree.grow();
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 } while (tree.canGrow());
-            }));
+            };
 
-            var flowAnimate = eval(Jscex.compile("async", function ()
+            var flowAnimate = async function ()
             {
                 do
                 {
                     tree.flower(2);
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 } while (tree.canFlower());
-            }));
+            };
 
-            var moveAnimate = eval(Jscex.compile("async", function ()
+            var moveAnimate = async function ()
             {
                 tree.snapshot("p1", 240, 0, 610, 680);
                 while (tree.move("p1", 500, 0))
                 {
                     foot.draw();
-                    $await(Jscex.Async.sleep(10));
+                    await delay(10);
                 }
                 foot.draw();
                 tree.snapshot("p2", 500, 0, 610, 680);
 
                 canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
                 canvas.css("background", "#ffe");
-                $await(Jscex.Async.sleep(300));
+                await delay(300);
                 canvas.css("background", "none");
-            }));
+            };
 
-            var jumpAnimate = eval(Jscex.compile("async", function ()
+            var jumpAnimate = async function ()
             {
                 var ctx = tree.ctx;
                 while (true)
@@ -170,11 +175,11 @@ export class ValentineComponent implements OnInit
                     tree.ctx.clearRect(0, 0, width, height);
                     tree.jump();
                     foot.draw();
-                    $await(Jscex.Async.sleep(25));
+                    await delay(25);
                 }
-            }));
+            };
 
-            var textAnimate = eval(Jscex.compile("async", function ()
+            var textAnimate = async function ()
             {
                 var together = new Date();
                 together.setFullYear(2018, 7, 20);
@@ -188,23 +193,23 @@ export class ValentineComponent implements OnInit
                 while (true)
                 {
                     timeElapse(together);
-                    $await(Jscex.Async.sleep(1000));
+                    await delay(1000);
                 }
-            }));
+            };
 
-            var runAsync = eval(Jscex.compile("async", function ()
+            var runAsync = async function ()
             {
-                $await(seedAnimate());
-                $await(growAnimate());
-                $await(flowAnimate());
-                $await(moveAnimate());
+                await seedAnimate();
+                await growAnimate();
+                await flowAnimate();
+                await moveAnimate();
 
-                textAnimate().start();
+                await textAnimate();
 
-                $await(jumpAnimate());
-            }));
+                await jumpAnimate();
+            };
 
-            runAsync().start();
+            await runAsync();
         })();
     }
 }

@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "copy-app-ads": "cpx src/assets/explosive-2048/app-ads.txt dist/duy-long-nguyen-resume-angular",
-    "publish": "ng build --configuration production && npm run copy-app-ads && firebase deploy"
+    "publish": "ng build --configuration production && npm run copy-app-ads && npx firebase deploy"
   },
   "private": true,
   "dependencies": {
