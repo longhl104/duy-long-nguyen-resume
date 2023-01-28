@@ -6,6 +6,22 @@
         >) và (<a href="http://firefox.com/download/">Firefox</a>)
     </div>
     <div id="wrap">
+        <swiper
+            class="my-swiper"
+            [loop]="true"
+            [autoplay]="{
+                delay: 2500,
+                disableOnInteraction: false
+            }"
+            *ngIf="slideShown"
+        >
+            <ng-template swiperSlide *ngFor="let file of imgFiles">
+                <img
+                    [src]="'assets/img/valentine/iloveimg-compressed/' + file + '.jpg'"
+                    class="swiper-lazy"
+                />
+            </ng-template>
+        </swiper>
         <div id="clock-box">
             <span class="STYLE1"></span>
             <font color="#FF0000"> Long <3 Yến </font>
