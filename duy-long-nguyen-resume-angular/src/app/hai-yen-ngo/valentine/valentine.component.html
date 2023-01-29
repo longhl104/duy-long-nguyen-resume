@@ -17,7 +17,11 @@
         >
             <ng-template swiperSlide *ngFor="let file of imgFiles">
                 <img
-                    [src]="'assets/img/valentine/iloveimg-compressed/' + file + '.jpg'"
+                    [src]="
+                        'assets/img/valentine/iloveimg-compressed/' +
+                        file +
+                        '.jpg'
+                    "
                     class="swiper-lazy"
                 />
             </ng-template>
@@ -31,3 +35,5 @@
         <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
 </div>
+<app-spinning-wheel *ngIf="spinningWheelShown"></app-spinning-wheel>
+<!-- <app-spinning-wheel></app-spinning-wheel> -->

@@ -20,6 +20,7 @@ SwiperCore.use([Autoplay,]);
 export class ValentineComponent implements OnInit
 {
     slideShown = false;
+    spinningWheelShown = false;
     imgFiles = [
         "20211011_173724",
         "20211016_143621",
@@ -229,6 +230,8 @@ export class ValentineComponent implements OnInit
 
             textAnimate();
             this.slideShown = true;
+            await delay(10000);
+            this.spinningWheelShown = true;
 
             await jumpAnimate();
         };
