@@ -56,6 +56,7 @@ export class ValentineComponent implements OnInit
         const audio = new Audio();
         audio.src = "assets/sounds/the-joker-and-the-queen--ed-sheeran.mp3";
         audio.muted = false;
+        audio.loop = true;
         audio.load();
         audio.play();
     }
