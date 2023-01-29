@@ -230,7 +230,7 @@ export class ValentineComponent implements OnInit
 
             textAnimate();
             this.slideShown = true;
-            await delay(10000);
+            await delay(50000);
             this.spinningWheelShown = true;
 
             await jumpAnimate();
