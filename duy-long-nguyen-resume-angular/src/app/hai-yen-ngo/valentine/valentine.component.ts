@@ -234,5 +234,27 @@ export class ValentineComponent implements OnInit
         };
 
         runAsync();
+        document.addEventListener("mousemove", (e) =>
+        {
+            if (Math.random() < 0.1)
+            {
+                const body = document.querySelector("body");
+                const heart = document.createElement("span");
+                heart.className = "heart";
+                const x = e.offsetX;
+                const y = e.offsetY;
+                heart.style.left = x + "px";
+                heart.style.top = y + "px";
+                const size = Math.random() * (30 - 10) + 10;
+                heart.style.width = 20 + size + "px";
+                heart.style.height = 20 + size + "px";
+                body?.appendChild(heart);
+
+                setTimeout(() =>
+                {
+                    heart.remove();
+                }, 2000);
+            }
+        });
     }
 }
